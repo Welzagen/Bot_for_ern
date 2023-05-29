@@ -4,7 +4,7 @@ import instaloader
 from pyrogram import Client
 
 bot = instaloader.Instaloader()
-TELEGRAM_CHANNEL_ID = -1001986723591
+TELEGRAM_CHANNEL_ID = -1001951565322
 API_ID = 15354199
 API_HASH = "4b42c4babb1f7866c005b8c5a967add7"
 
