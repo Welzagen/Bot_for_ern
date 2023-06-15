@@ -5,12 +5,12 @@ from pyrogram import Client
 
 
 bot = instaloader.Instaloader()
-TELEGRAM_CHANNEL_ID = -1001736830956
+TELEGRAM_CHANNEL_ID = -1001951565322
 API_ID = 15354199
 API_HASH = "4b42c4babb1f7866c005b8c5a967add7"
 
 bot.load_session_from_file("botforern2", filename="./session-botforern2")
-posts = instaloader.Profile.from_username(bot.context, "botforern2").get_posts()
+posts = instaloader.Profile.from_username(bot.context, "ernest_kuhni").get_posts()
 
 
 def send_message(post):
@@ -45,10 +45,10 @@ def get_new_post(posts):
 with Client("my_acc", API_ID, API_HASH) as app:
     posts_ = [post for post in posts]
     while True:
-        posts = instaloader.Profile.from_username(bot.context, "botforern2").get_posts()
+        posts = instaloader.Profile.from_username(bot.context, "ernest_kuhni").get_posts()
         last_post = get_new_post(posts)
         if last_post not in posts_:
             send_message(last_post)
             posts_.append(last_post)
 
-        time.sleep(30)
+        time.sleep(60)
